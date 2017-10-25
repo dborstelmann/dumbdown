@@ -1,0 +1,24 @@
+{
+  "name": "dumbdown",
+  "version": "1.0.0",
+  "description": "Translate SQL queries into Salesforce SmartSQL for the Salesforce Mobile SDK",
+  "main": "dumbdown.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dborstelmann/dumbdown.git"
+  },
+  "keywords": [
+    "SQL",
+    "Salesforce",
+    "SmartSQL"
+  ],
+  "author": "Dan Borstelmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dborstelmann/dumbdown/issues"
+  },
+  "homepage": "https://github.com/dborstelmann/dumbdown#readme"
+}
