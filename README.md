@@ -4,8 +4,7 @@
 
 Dumbdown.js allows for developers to write a platform independent backend that can be transitioned to another DBMS, or use it purely to be able to write SQL in a format that developers are comfortable with.
 
-### NOTE:
-
+## NOTE:
 Smart SQL has limited functionality.  Therefore your SQL will only be allowed to be so complicated.  Please follow the manual below.
 
 ## MANUAL:
