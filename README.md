@@ -1,20 +1,18 @@
 # dumbdown.js
-Translate SQL queries into Salesforce SmartSQL for the Salesforce Mobile SDK
 
-## A light wrapper library to turn normal SQL into Salesforce Smart SQL
+### A light wrapper library to turn normal SQL into Salesforce Smart SQL
 
-### Allows for developers to write a platform independent backend that can be
-transitioned to another DBMS, or use it purely to be able to write SQL in a
-format that we all are comfortable with.
+Dumbdown.js allows for developers to write a platform independent backend that can be transitioned to another DBMS, or use it purely to be able to write SQL in a format that we all are comfortable with.
 
-### NOTE: Smart SQL has limited functionality.  Therefore your SQL will only be
-allowed to be so complicated.  Please follow the manual below.
+### NOTE:
+
+Smart SQL has limited functionality.  Therefore your SQL will only be allowed to be so complicated.  Please follow the manual below.
 
 ## MANUAL:
 
-#### Smart SQL is for read only queries and therefore SELECT statements only.
-
-#### This library allows for the following:
+- Smart SQL is for read only queries and therefore SELECT statements only.
+- This library is case insensitive.
+- This library allows for the following:
 
 ```
     SELECT,
@@ -32,9 +30,9 @@ features within SQL may continue to work (they have not been tested, so please
 attempt at your own risk).  This library logs its return string right before
 passing the wrapped string to your code so please check your queries to make
 sure they look as you want them to.  This library was built to allow developers
-to write queries easier, but not to allow you to ignore the SF docs, you must
-still have knowledge of Smart SQL to write these queries.  Whatever SF allows,
-we try to allow here.  This library is case insensitive.
+to write queries easier, but not to allow you to ignore the Salesforce docs, you must
+still have knowledge of Smart SQL to write these queries.  Whatever Salesforce allows,
+we try to allow here.
 
 ## Examples:
 
