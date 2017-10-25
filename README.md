@@ -1,15 +1,22 @@
 # dumbdown.js
 Translate SQL queries into Salesforce SmartSQL for the Salesforce Mobile SDK
 
-A light wrapper library to turn normal SQL into Salesforce Smart SQL
-Allows for developers to write a platform independent backend that can be
+## A light wrapper library to turn normal SQL into Salesforce Smart SQL
+
+### Allows for developers to write a platform independent backend that can be
 transitioned to another DBMS, or use it purely to be able to write SQL in a
 format that we all are comfortable with.
-NOTE: Smart SQL has limited functionality.  Therefore your SQL will only be
+
+### NOTE: Smart SQL has limited functionality.  Therefore your SQL will only be
 allowed to be so complicated.  Please follow the manual below.
-MANUAL:
-Smart SQL is for read only queries and therefore SELECT statements only.
-This library allows for the following:
+
+## MANUAL:
+
+#### Smart SQL is for read only queries and therefore SELECT statements only.
+
+#### This library allows for the following:
+
+```
     SELECT,
     FROM,
     WHERE,
@@ -17,6 +24,8 @@ This library allows for the following:
     ORDER BY,
     LIMIT,
     JOIN (NOTE: do not attempt to write JOINs with JOIN keyword, for now it's old world syntax)
+```
+
 The query matching and replacing is done with regexes looking for the above
 keywords.  Therefore, functions such as COALESCE, COUNT, AVG, SUM and other
 features within SQL may continue to work (they have not been tested, so please
@@ -26,9 +35,13 @@ sure they look as you want them to.  This library was built to allow developers
 to write queries easier, but not to allow you to ignore the SF docs, you must
 still have knowledge of Smart SQL to write these queries.  Whatever SF allows,
 we try to allow here.  This library is case insensitive.
-Examples:
-WHERE
-Input:
+
+## Examples:
+
+#### WHERE
+
+- Input:
+```
 SELECT
     id,
     full_name
@@ -39,7 +52,9 @@ WHERE
 AND
     last_name = 'Smith'
 LIMIT 100
-Output:
+```
+- Output:
+```
 SELECT
     {user:Id},
     {user:FullName__c}
@@ -50,8 +65,12 @@ WHERE
 AND
     {user:LastName__c} = 'Smith'
 LIMIT 100
-JOIN
-Input:
+```
+
+#### JOIN
+
+- Input:
+```
 SELECT
     user.id,
     user.name,
@@ -61,7 +80,9 @@ FROM
     profile
 WHERE
     user.id = profile.user_id
-Output:
+```
+- Output:
+```
 SELECT
     {user.Id},
     {user.Name},
@@ -71,8 +92,12 @@ FROM
     {profile}
 WHERE
     {user:Id} = {profile:UserId}
-GROUPS AND ORDERS:
-Input:
+```
+
+#### GROUPS AND ORDERS:
+
+- Input:
+```
 SELECT
     id,
     date,
@@ -84,7 +109,9 @@ GROUP BY
     date
 ORDER BY
     time
-Output:
+```
+- Output:
+```
 SELECT
     {meetings:Id},
     {meetings:Date},
@@ -96,3 +123,4 @@ GROUP BY
     {meetings:Date}
 ORDER BY
     {meetings:Event_Time__c}
+```
