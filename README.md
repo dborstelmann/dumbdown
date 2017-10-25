@@ -18,7 +18,7 @@ Smart SQL has limited functionality.  Therefore your SQL will only be allowed to
     FROM,
     WHERE,
     GROUP BY,
-    ORDER BY,
+    ORDER BY (must have ASC or DESC or query will not order),
     LIMIT,
     JOIN (NOTE: do not attempt to write JOINs with JOIN keyword, for now it's old world syntax)
 ```
