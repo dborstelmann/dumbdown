@@ -277,6 +277,7 @@ const dumbdown = (queryString) => {
     const selectPortion = wrapSelects(queryString),
         fromPortion = wrapFrom(queryString),
         qualifierPortion = wrapQualifiers(queryString);
+    console.log(selectPortion + fromPortion + qualifierPortion);
     return selectPortion + fromPortion + qualifierPortion;
 };
 
