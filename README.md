@@ -2,7 +2,7 @@
 
 ### A light wrapper library to turn normal SQL into Salesforce Smart SQL
 
-Dumbdown.js allows for developers to write a platform independent backend that can be transitioned to another DBMS, or use it purely to be able to write SQL in a format that we all are comfortable with.
+Dumbdown.js allows for developers to write a platform independent backend that can be transitioned to another DBMS, or use it purely to be able to write SQL in a format that developers are comfortable with.
 
 ### NOTE:
 
